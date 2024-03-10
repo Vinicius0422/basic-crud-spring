@@ -1,4 +1,4 @@
-package br.com.vinicius.basiccrud.model;
+package br.com.vinicius.basiccrud.models;
 
 import jakarta.persistence.*;
 import lombok.*;
