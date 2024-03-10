@@ -30,6 +30,12 @@ public class Contact {
     private LocalDate birthDate;
     private String occupation;
     private String company;
-    @ManyToOne
-    private Address address;
+    @Column(length = 150)
+    private String street;
+    @Column(length = 50)
+    private String city;
+    @Column(length = 50)
+    private String neighborhood;
+    @Column(length = 15)
+    private String zipCode;
 }
