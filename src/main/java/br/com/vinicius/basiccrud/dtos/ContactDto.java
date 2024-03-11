@@ -4,8 +4,6 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 
-import java.time.LocalDate;
-
 public record ContactDto(
         @NotBlank
         @Max(50)
@@ -23,12 +21,15 @@ public record ContactDto(
         @NotBlank
         @Max(50)
         String phone,
-        LocalDate birthDate,
+        String birthDate,
         String occupation,
         String company,
         @NotBlank
         @Max(150)
         String street,
+        @NotBlank
+        @Max(50)
+        String country,
         @NotBlank
         @Max(50)
         String city,
