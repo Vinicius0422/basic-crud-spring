@@ -31,7 +31,7 @@ public class ContactServiceImplementation implements ContactService{
 
     @Override
     public ContactDto findContactById(Long id) {
-        Contact contact = contactRepository.findById(id).orElse(null);
+        Contact contact = contactRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No contact found for this ID"));
         return contactMapper.entityToDto(contact);
     }
 
@@ -80,6 +80,7 @@ public class ContactServiceImplementation implements ContactService{
 
     @Override
     public void deleteContact(Long id) {
+        Contact contact = contactRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No contact found for this ID"));
         contactRepository.deleteById(id);
     }
 }
