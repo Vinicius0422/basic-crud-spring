@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ContactRepository extends JpaRepository<Contact, Long> {
 
-     @Query("SELECT c FROM Contact c WHERE c.firstName LIKE %:parameter% OR c.lastName LIKE %:parameter% OR c.occupation %:parameter% OR c.company LIKE %:parameter%")
+     @Query("SELECT c FROM Contact c WHERE c.firstName LIKE %:parameter% OR c.lastName LIKE %:parameter% OR c.occupation LIKE %:parameter% OR c.company LIKE %:parameter%")
      Page<Contact> findContactByParameter(String parameter, Pageable pageable);
 
      Contact findContactByEmail(String email);
