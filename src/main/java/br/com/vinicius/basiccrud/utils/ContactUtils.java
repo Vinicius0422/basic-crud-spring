@@ -1,5 +1,8 @@
 package br.com.vinicius.basiccrud.utils;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ContactUtils {
 
     public String capitalizeFirstLetter(String field) {

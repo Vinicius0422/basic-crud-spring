@@ -3,10 +3,12 @@ package br.com.vinicius.basiccrud.mapper;
 import br.com.vinicius.basiccrud.dtos.ContactDto;
 import br.com.vinicius.basiccrud.models.Contact;
 import br.com.vinicius.basiccrud.utils.ContactUtils;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+@Component
 public class ContactMapper {
 
     private ContactUtils contactUtils;
