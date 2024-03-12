@@ -20,6 +20,7 @@ public class ContactMapper {
     }
 
     public Contact dtoToEntity(ContactDto contactDto){
+        //Method to transform dto into entity
         Contact contact = new Contact(
                 contactDto.firstName().toLowerCase(),
                 contactDto.lastName().toLowerCase(),
@@ -40,6 +41,7 @@ public class ContactMapper {
     }
 
     public ContactDto entityToDto(Contact contact){
+        //Method to transform entity into dto
         ContactDto contactDto = new ContactDto(
                 contactUtils.capitalizeFirstLetter(contact.getFirstName()),
                 contactUtils.capitalizeFirstLetter(contact.getLastName()),

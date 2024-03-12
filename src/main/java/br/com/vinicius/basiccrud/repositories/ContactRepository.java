@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ContactRepository extends JpaRepository<Contact, Long> {
 
+     //Query to find contacts by parameter - first name, last name, occupation or company
      @Query("SELECT c FROM Contact c WHERE c.firstName LIKE %:parameter% OR c.lastName LIKE %:parameter% OR c.occupation LIKE %:parameter% OR c.company LIKE %:parameter%")
      Page<Contact> findContactByParameter(String parameter, Pageable pageable);
 

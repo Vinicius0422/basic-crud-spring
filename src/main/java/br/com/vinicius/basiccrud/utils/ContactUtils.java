@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ContactUtils {
 
+    //Capitalizes the first letter
     public String capitalizeFirstLetter(String field) {
         if (field == null || field.isEmpty()) {
             return field;
