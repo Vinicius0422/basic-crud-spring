@@ -1,7 +1,6 @@
 package br.com.vinicius.basiccrud.exceptions;
 
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +12,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class CustomizedExceptionsHandler {
